@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  BrainReact — тест швидкості реакції
+  Copyright (c) 2026 Томюк Микола Юрійович. All rights reserved.
+  Власний код. Сторонні компоненти — див. THIRD_PARTY_NOTICES.md
+-->
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrainReact — тест реакції</title>
+  <!-- Pico CSS v2.1.1, MIT License, (c) Pico — сторонній компонент -->
+  <link rel="stylesheet" href="vendor/pico.min.css">
+  <!-- Власні стилі -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Навчальний проєкт · Brain-1</p>
+      <h1>BrainReact</h1>
+      <p class="subtitle">Перевірте швидкість своєї реакції. Натисніть «Старт» і клацніть по полю, щойно воно стане зеленим.</p>
+    </header>
+
+    <article>
+      <div id="arena" class="arena idle" role="button" tabindex="0" aria-live="polite">
+        <span id="arena-text">Натисніть «Старт»</span>
+      </div>
+      <div class="controls">
+        <button id="start-btn">Старт</button>
+        <button id="reset-btn" class="secondary outline">Скинути результати</button>
+      </div>
+    </article>
+
+    <article>
+      <header class="results-header">
+        <strong>Мої результати</strong>
+        <span id="best" class="badge">Рекорд: —</span>
+      </header>
+      <ol id="history" class="history"></ol>
+      <p id="empty" class="muted">Ще немає жодної спроби.</p>
+    </article>
+
+    <footer class="muted small">
+      Власний код © 2026 Томюк М.Ю. · Pico CSS (MIT) · canvas-confetti (ISC)
+    </footer>
+  </main>
+
+  <!-- canvas-confetti v1.9.4, ISC License, (c) Kiril Vatev — сторонній компонент -->
+  <script src="vendor/confetti.browser.js"></script>
+  <!-- Власна логіка застосунку -->
+  <script src="app.js"></script>
+</body>
+</html>
